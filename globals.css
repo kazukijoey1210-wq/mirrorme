@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 34 65% 98%;
+  --foreground: 332 14% 13%;
+  --card: 0 0% 100%;
+  --card-foreground: 332 14% 13%;
+  --primary: 332 14% 13%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 340 60% 96%;
+  --secondary-foreground: 332 14% 13%;
+  --muted: 340 30% 94%;
+  --muted-foreground: 332 9% 43%;
+  --accent: 262 55% 94%;
+  --accent-foreground: 332 14% 13%;
+  --destructive: 350 75% 48%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 340 24% 88%;
+  --input: 340 24% 88%;
+  --ring: 338 50% 76%;
+  --radius: 1.25rem;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 0%, rgba(255, 216, 226, 0.72), transparent 30rem),
+    radial-gradient(circle at 88% 10%, rgba(224, 214, 255, 0.65), transparent 28rem),
+    hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Sans",
+    "Yu Gothic UI",
+    "Yu Gothic",
+    system-ui,
+    sans-serif;
+  letter-spacing: 0;
+}
+
+::selection {
+  background: #f7c7d3;
+  color: #241c22;
+}
+
+.container-page {
+  margin-inline: auto;
+  width: min(1120px, calc(100% - 32px));
+}
+
+.mobile-safe-bottom {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom));
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 80px rgba(42, 31, 38, 0.1);
+  backdrop-filter: blur(18px);
+}
